@@ -1,0 +1,73 @@
+---
+title: "mi titulo personalizado: DashBoard Class"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+data_df<-read.csv("stations_data.csv")
+```
+
+Intro Page
+============================================
+Column {.tabset}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+library(leaflet)
+leaflet() %>%
+addTiles() %>%
+addMarkers(lng = data_df$longitude, lat = data_df$latitude)
+Enrique J.
+
+```
+
+### Chart A
+
+```{r}
+
+```
+
+
+second Page
+============================================
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+library(flexdashboard)
+library(readr)
+library(ggplot2)
+library(dplyr)
+library(lubridate)
+trips_df<-read.csv("bikeshare.csv")
+trips_df %>%
+mutate(Hour = hour(start_date)) %>%
+group_by(Hour) %>%
+summarize(`Trips Started` = n()) %>%
+ggplot(aes(x = Hour, y = `Trips Started`)) +
+theme_bw() +
+geom_bar(stat = 'identity')
+
+
+```
+
+### Chart C
+
+```{r}
+
+```
+
+### Chart D
+
+```{r}
+
+```

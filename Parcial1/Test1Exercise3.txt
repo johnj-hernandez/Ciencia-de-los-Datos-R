@@ -1,0 +1,18 @@
+UTB - DATA SCIENCE
+Test 1 con R
+Jueves
+
+
+         Age Height  Weight  Sex
+Joana     24   1,66      65    F
+María     21      *      57    F
+Josep     30   1,81      NA    M
+Martha    27   1,82      85    F
+Raúl      28   1,70      70    M
+Arantxa   25   1,63      61    F
+Pedro     21   1,78      83    M
+Frederico 18   1,66      68    M
+Pere      20   1,75      81    M
+Martí     25   1,94      99    M
+Andrea    25      *      NA    F
+Silvia    24   1,83      80    F
